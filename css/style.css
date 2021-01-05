@@ -230,14 +230,12 @@ img {
 }
 
 .close-button:hover {
-  border: var(--accents);
+  border-color: var(--accents);
 }
 /*======== END MODAL WINDOW ========*/
 
 /*======== FORM ========*/
 .form {
-  width: 528px;
-  height: 581px;
   box-sizing: border-box;
 
   margin-left: auto;
@@ -265,9 +263,13 @@ img {
   flex-direction: column;
 
   margin-bottom: 10px;
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-field label {
+.form-label {
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -286,6 +288,10 @@ img {
   padding: 11px 42px;
 
   height: 40px;
+
+  transition-property: border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-icon {
@@ -300,6 +306,16 @@ img {
 .form-input:hover ~ .form-icon,
 .form-input:focus ~ .form-icon {
   fill: var(--accents);
+}
+
+.form-input:hover,
+.form-input:focus {
+  border-color: var(--accents);
+}
+
+.form-field textarea:hover,
+.form-field textarea:focus {
+  border-color: var(--accents);
 }
 
 .form-field svg {
@@ -317,6 +333,10 @@ textarea {
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
+
+  transition-property: border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-field textarea::placeholder {
@@ -327,24 +347,58 @@ textarea {
   line-height: 1.14;
   letter-spacing: 0.01em;
 
-  color: rgba(97, 43, 43, 0.5);
+  color: rgba(117, 117, 117, 0.5);
 }
 
 .form-agreement {
   display: flex;
   align-items: center;
+
   margin-top: 20px;
   padding-left: 12px;
 }
 
 .form-agreement input[type="checkbox"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+
+  /* -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  position: absolute; */
+}
+
+.form-agreement .icon {
+  display: block;
   width: 16px;
   height: 15px;
 
-  margin: 0px 9px 0px 0px;
+  border: solid 2px #252121;
+  border-radius: 2px;
+
+  margin-right: 9px;
+
+  transition-property: all;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-agreement label {
+.form-agreement input[type="checkbox"]:checked + .icon {
+  background-color: var(--accents);
+  background-image: url("../images/check-icon.svg");
+  background-size: contain;
+  background-origin: border-box;
+  border-color: var(--accents);
+}
+
+.form-agreement-label {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -431,6 +485,7 @@ textarea {
   background: var(--accents);
 
   border-radius: 4px;
+  border-width: 0px;
   text-align: center;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   color: #ffffff;
@@ -634,11 +689,9 @@ textarea {
 .social-list-link:focus {
   background-color: var(--accents);
 }
-
 /*======== END TEAM ========*/
 
 /*======== CLIENTS ========*/
-
 .clients {
   padding-bottom: 94px;
   padding-top: 94px;
@@ -682,7 +735,6 @@ textarea {
 .clients-link:focus {
   border-color: var(--accents);
 }
-
 /*======== END CLIENTS ========*/
 
 /*======== FOOTER ========*/
@@ -736,7 +788,7 @@ textarea {
 
 .footer-title {
   padding-top: 12px;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
@@ -746,8 +798,12 @@ textarea {
   color: #ffffff;
 }
 
-.footer-list-item:not(:last-child) {
+.footer-list-item:first-child {
   margin-right: 70px;
+}
+
+.footer-list-item:nth-child(2) {
+  margin-right: 93px;
 }
 
 .footer-list .social-list {
@@ -775,16 +831,66 @@ textarea {
 .footer-list-item .social-list-link:focus {
   background: var(--accents);
 }
-
 /*======== END FOOTER ========*/
 
 /*========== FOOTER FORM =========*/
 
-.footer-form {
-  width: 570px;
-  height: 86px;
+.footer-form-input {
+  display: inline;
+  width: 358px;
+  height: 50px;
+  margin-right: 12px;
 
-  outline: 2px solid tomato;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+
+  padding: 15px 16px;
+
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-form-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 200px;
+  height: 50px;
+
+  background: var(--accents);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border-width: 0px;
+
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+
+  color: #ffffff;
+}
+
+.footer-form-button::after {
+  content: "";
+  display: block;
+
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+
+  background-image: url("../images/send-icon.svg");
+  background-size: contain;
 }
 
 /*========== END FOOTER FORM =========*/
@@ -836,7 +942,6 @@ textarea {
   background-color: var(--accents);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
-
 /*======== END PORTFOLIO BUTTONS ========*/
 
 /*======== PORTFOLIO CARDS ========*/

@@ -66,41 +66,42 @@
                         Оставьте свои данные, мы вам перезвоним
                     </p>
                 
-                    <div class="form-field">
-                        <label for="name">Имя</label>
-                        <input class="form-input" type="text" name="name" id="name" autofocus>
+                    <label class="form-field">
+                        <span class="form-label">Имя</span>
+                        <input class="form-input" type="text" name="name" autofocus>
                         <svg class="form-icon">
                             <use href="./images/sprite.svg#form-person"></use>
                         </svg>
-                    </div>
+                    </label>
                 
-                    <div class="form-field">
-                        <label for="tel">Телефон</label>
-                        <input class="form-input" type="tel" name="tel" id="tel">
+                    <label class="form-field">
+                        <span class="form-label">Телефон</span>
+                        <input class="form-input" type="tel" name="tel">
                         <svg class="form-icon">
                             <use href="./images/sprite.svg#form-phone"></use>
                         </svg>
-                    </div>
+                    </label>
                 
-                    <div class="form-field">
-                        <label for="email">Почта</label>
-                        <input class="form-input" type="email" name="email" id="email">
+                    <label class="form-field">
+                        <span class="form-label">Почта</span>
+                        <input class="form-input" type="email" name="email">
                         <svg class="form-icon">
                             <use href="./images/sprite.svg#form-envelope"></use>
                         </svg>
-                    </div>
+                    </label>
                 
-                    <div class="form-field">
-                        <label for="comment">Комментарий</label>
-                        <textarea name="comment" id="comment" placeholder="Введите текст"></textarea>
-                    </div>
+                    <label class="form-field">
+                        <span class="form-label">Комментарий</span>
+                        <textarea name="comment" placeholder="Введите текст"></textarea>
+                    </label>
                 
-                    <div class="form-agreement">
-                        <input type="checkbox" name="" value="agreement" id="agreement">
-                        <label for="agreement">
+                    <label class="form-agreement">
+                        <input type="checkbox" name="agreement-checkbox" value="agreement">
+                        <span class="icon"></span>
+                        <span class="form-agreement-label">
                             Соглашаюсь с рассылкой и принимаю <a href="#">Условия договора</a>
-                        </label>
-                    </div>
+                        </span>
+                    </label>
                 
                     <div class="form-button">
                         <button type="submit">Отправить</button>
@@ -477,42 +478,43 @@
                     <p class="footer-title">присоединяйтесь</p>
                     <ul class="social-list list">
                         <li class="item">
-                        <a class="social-list-link" href="#">
-                            <svg class="social-list-icon">
-                                <use href="./images/sprite.svg#instagram"></use>
-                            </svg>
-                        </a>
-                    </li>
+                            <a class="social-list-link" href="#">
+                                <svg class="social-list-icon">
+                                    <use href="./images/sprite.svg#instagram"></use>
+                                </svg>
+                            </a>
+                        </li>
                         <li class="item">
-                        <a class="social-list-link" href="#">
-                            <svg class="social-list-icon">
-                                <use href="./images/sprite.svg#twitter"></use>
-                            </svg>
-                        </a>
-                    </li>
+                            <a class="social-list-link" href="#">
+                                <svg class="social-list-icon">
+                                    <use href="./images/sprite.svg#twitter"></use>
+                                </svg>
+                            </a>
+                        </li>
                         <li class="item">
-                        <a class="social-list-link" href="#">
-                            <svg class="social-list-icon">
-                                <use href="./images/sprite.svg#facebook"></use>
-                            </svg>
-                        </a>
-                    </li>
+                            <a class="social-list-link" href="#">
+                                <svg class="social-list-icon">
+                                    <use href="./images/sprite.svg#facebook"></use>
+                                </svg>
+                            </a>
+                        </li>
                         <li class="item">
-                        <a class="social-list-link" href="#">
-                            <svg class="social-list-icon">
-                                <use href="./images/sprite.svg#linkedin"></use>
-                            </svg>
-                        </a>
-                    </li>
+                            <a class="social-list-link" href="#">
+                                <svg class="social-list-icon">
+                                    <use href="./images/sprite.svg#linkedin"></use>
+                                </svg>
+                            </a>
+                        </li>
                     </ul>
                 </li>
 
                 <li class="footer-list-item">
-                    <form class="footer-form">
-                        <label for="subscribe" class="footer-title">Подпишитесь на рассылку</label>
-                        <input type="email" name="subscribe" id="subscribe">
-                
-                        <button type="submit">Подписаться</button>
+                    <form>
+                        <label>
+                            <p class="footer-title">Подпишитесь на рассылку</p>
+                            <input class="footer-form-input" type="email" name="subscribe" placeholder="E-mail">
+                            <button class="footer-form-button" type="submit">Подписаться</button>
+                        </label>
                     </form>
                 </li>
             </ul>
