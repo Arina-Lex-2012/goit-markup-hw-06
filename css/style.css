@@ -835,8 +835,11 @@ textarea {
 
 /*========== FOOTER FORM =========*/
 
+.footer-form {
+  width: 574px;
+}
+
 .footer-form-input {
-  display: inline;
   width: 358px;
   height: 50px;
   margin-right: 12px;
