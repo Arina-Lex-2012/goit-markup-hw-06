@@ -412,8 +412,12 @@
                         </label>
                         <div>
                             <input type="email" name="mail" id="mail" placeholder="E-mail"/>
-                            <button type="submit">Подписаться</button>
-
+                            <button type="submit">
+                                <span>Подписаться</span>
+                                <svg class="icon-send" width="24" height="24">
+                                    <use href="./images/sprite.svg#icon-send"></use>
+                                </svg>
+                            </button>
                         </div>                        
                     </form>                    
                 </div>
@@ -423,7 +427,7 @@
 
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-            <button class="modal-close-btn" data-modal-close>
+            <button class="modal-close-btn"  data-modal-close>
                 <svg class="cross" width="18" height="18">
                     <use href="./images/sprite.svg#close-button"></use>
                 </svg>
@@ -433,27 +437,33 @@
                 <h2>Оставьте свои данные, мы вам перезвоним</h2>
 
                 <div class="form-field">
-                    <label for="name">Имя</label>
-                    <input type="text" name="name" id="name" />
-                    <svg class="form-icon" width="18" height="18">
-                        <use href="./images/sprite.svg#envelope"></use>
-                    </svg>
+                    <label class="form-field">Имя</label>
+                    <div class="input-container">
+                        <input type="text" name="name" id="name" />
+                        <svg class="modal-icon" width="18" height="18">
+                            <use href="./images/sprite.svg#modal-person"></use>
+                        </svg>
+                    </div>
                 </div>
                 
                 <div class="form-field">
                     <label for="tel">Телефон</label>
-                    <input type="tel" name="tel" id="tel" />
-                    <svg class="form-icon" width="18" height="18">
-                        <use href="./images/sprite.svg#envelope"></use>
-                    </svg>
+                    <div class="input-container">
+                        <input type="tel" name="tel" id="tel" />
+                        <svg class="modal-icon" width="18" height="18">
+                            <use href="./images/sprite.svg#modal-phone"></use>
+                        </svg>
+                    </div>
                 </div>
                 
                 <div class="form-field">
                     <label for="mail">Почта</label>
-                    <input type="email" name="mail" id="mail" />
-                    <svg class="form-icon" width="18" height="18">
-                        <use href="./images/sprite.svg#envelope"></use>
-                    </svg>
+                    <div class="input-container">
+                        <input type="email" name="mail" id="mail" />
+                        <svg class="modal-icon" width="18" height="18">
+                            <use href="./images/sprite.svg#modal-email"></use>
+                        </svg>
+                    </div>
                 </div>
 
                 <div class="form-field comment">
@@ -461,9 +471,12 @@
                     <textarea name="comment" id="comment" rows="6" placeholder="Введите текст"></textarea>
                 </div>
 
-                <div class="form-field policy">
-                    <input type="checkbox" id="policy">
-                    <label for="policy">Соглашаюсь с рассылкой и принимаю <a href="">Условия договора</a></label>
+                <div class="policy">
+                    <label>
+                        <input class="checkbox" type="checkbox" name="checkbox" />
+                        <span class="check-icon"></span>
+                        <span>Соглашаюсь с рассылкой и принимаю </span> &nbsp;  <a href="">Условия договора</a>            
+                    </label>
                 </div>
 
                 <div class="form-field submit">
